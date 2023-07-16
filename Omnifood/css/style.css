@@ -116,6 +116,35 @@
     font-weight: 700;
 }
 
+/* *************** */
+/* FEATURED IN SECTION */
+/* *************** */
+
+
+.section-featured {
+    padding: 4.8rem 0 3.2rem 0;
+}
+
+.heading-featured-in {
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .75px;
+    text-align: center;
+    margin-bottom: 2.4rem;
+    color: #888;
+}
+
+.logos {
+    display: flex;
+    justify-content: space-around;
+}
+.logos img {
+    height: 3.2rem;
+    filter: brightness(0);
+    opacity: .5;
+}
+
 /* ***************** */
 /* HOW IT WORKS SECTION */
 /* ***************** */
@@ -127,7 +156,7 @@
 .step-number {
     font-size: 8.6rem;
     font-weight: 600;
-    color: #333;
+    color: #ddd;
     margin-bottom: 1.2rem;
 }
 
@@ -140,10 +169,40 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+.step-img-box::before,
+.step-img-box::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.step-img-box::before {
+    z-index: -2;
+    width: 60%;
+    /* This is 60% of parent's container (step-img-box)*/
+    padding-bottom: 60%;
+    background-color: #fdf2e9;
+}
+
+.step-img-box::after {
+    width: 45%;
+    /* This is 60% of parent's container (step-img-box)*/
+    padding-bottom: 45%;
+    background-color: #fae5d3;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: -1;
 }
 
 
 .step-img {
-    width: 40%;
+    width: 35%;
 }
 
