@@ -193,6 +193,11 @@ body {
     text-align: center;
 }
 
+/* Extra Classes */
+.mt-md {
+    margin-top: 4.8rem !important;
+}
+
 strong {
     font-weight: 500 !important;
 }
