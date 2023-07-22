@@ -289,26 +289,7 @@
     width: 100%;
 }
 
-.list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 1.6rem;
-}
 
-.list-icon {
-    width: 3rem;
-    height: 3rem;
-    color: #e67e22;
-}
-
-.list-item {
-    display: flex;
-    align-items: center;
-    gap: 1.6rem;
-    font-size: 1.8rem;
-    line-height: 1.2;
-}
 
 
 
@@ -381,4 +362,81 @@
 
 .gallery-item img:hover {
     transform: scale(1.1);
+}
+
+/* ***************** */
+/* PRICING SECTION */
+/* ***************** */
+
+.section-pricing {
+    padding: 9.6rem 0;
+}
+
+.pricing-plan {
+    border-radius: 11px;
+    width: 75%;
+}
+
+.pricing-plan--starter {
+    justify-self: end;
+    border: 2px solid #fdf2e9;
+    padding: 4.6rem;
+}
+
+.pricing-plan--complete {
+    padding: 4.8rem;
+    background-color: #fdf2e9;
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing-plan--complete::after {
+    content: "Best Value";
+    position: absolute;
+    top: 6%;
+    right: -18%;
+    text-transform: uppercase;
+    background-color: #ffd43b;
+    color: #333;
+    font-weight: 700;
+    padding: .8rem 8rem;
+    font-size: 1.4rem;
+    transform: rotate(45deg);
+}
+
+.plan-header {
+    text-align: center;
+    margin-bottom: 4.2rem;
+}
+
+.plan-name {
+    text-transform: uppercase;
+    color: #cf711f;
+    font-size: 2rem;
+    letter-spacing: 0.75px;
+    font-weight: 600;
+    margin-bottom: 3.2rem;
+}
+
+.plan-price {
+    font-weight: 600;
+    font-size: 6.2rem;
+    color: #333;
+    margin-bottom: 1.6rem;
+}
+
+.plan-price span {
+    font-size: 3rem;
+    font-weight: 500;
+    margin-right: .8rem;
+}
+
+.plan-text {
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+.plan-sign-up {
+    text-align: center;
+    margin-top: 4.2rem;
 }

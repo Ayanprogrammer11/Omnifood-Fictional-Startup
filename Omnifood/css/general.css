@@ -27,7 +27,7 @@ Paragraph: 1.6
 - Tints: #fdf2e9 #fae5d3
 - Shades: #cf711f
 - Accents: 
-- Greys: #555 #333 #ddd
+- Greys: #555 #333 #ddd #6f6f6f
 
 --- 05 SHADOWS
 
@@ -179,6 +179,28 @@ body {
     color: #cf711f;
 }
 
+.list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.list-icon {
+    width: 3rem;
+    height: 3rem;
+    color: #e67e22;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    font-size: 1.8rem;
+    line-height: 1.2;
+}
+
+/*
 .alert {
     position: fixed;
     top: 50%;
@@ -191,6 +213,7 @@ body {
     font-weight: 800;
 }
 
+
 .alert .alert-heading {
     font-size: 2rem;
     color: #fff;
@@ -201,6 +224,8 @@ body {
     line-height: 1.6;
     font-size: 1.4rem;
 }
+
+*/
 
 
 /* REUSABLE/SETTINGS CLASSES */
