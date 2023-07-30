@@ -5,25 +5,13 @@ const header = document.querySelector(".header");
 icons.forEach((icon) =>
   icon.addEventListener("click", () => header.classList.toggle("nav-open"))
 );
-/*
+
 links.forEach((link) => {
-  link.addEventListener("click", function (e) {
-    const href = this.getAttribute("href");
-    console.log(href);
-    if (href === "#") {
-      console.log("reached window");
-      window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: "smooth",
-      });
-    } else if (href.length > 1 && href.startsWith("#")) {
-      document.querySelector(href).scrollIntoView({ behavior: "smooth" });
-      if(header.classList.contains('nav-open')) header.classList.toggle('nav-open');
-    }
+  link.addEventListener("click", (e) => {
+    if (header.classList.contains("nav-open"))
+      header.classList.toggle("nav-open");
   });
 });
-*/
 
 document.addEventListener("scroll", () => {
   if (
