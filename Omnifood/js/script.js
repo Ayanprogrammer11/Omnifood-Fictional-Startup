@@ -1,10 +1,9 @@
 // ////////////////////////////
 // Setting Year
 // /////////////////////////
-const yearEl = document.querySelector('.year');
+const yearEl = document.querySelector(".year");
 const year = new Date().getFullYear();
 yearEl.textContent = year;
-
 
 // ////////////////////////////
 // Navigation
@@ -26,8 +25,10 @@ navParent.addEventListener("click", function (e) {
   if (e.target.classList.contains("main-nav-link")) {
     const link = e.target;
     const href = link.getAttribute("href");
-    const sectionEl = document.querySelector(href);
-    sectionEl.scrollIntoView({ behavior: "smooth" });
+    if (href.length !== 1 && href.startsWith("#")) {
+      const sectionEl = document.querySelector(href);
+      sectionEl.scrollIntoView({ behavior: "smooth" });
+    }
   }
 
   // Closing Navigation
@@ -36,6 +37,12 @@ navParent.addEventListener("click", function (e) {
   }
 });
 
+document.querySelectorAll('a:link[href="#"]').forEach((l) => {
+  l.addEventListener("click", function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+});
 
 // ////////////////////////////
 // Sticky Navigatiion
@@ -70,7 +77,6 @@ function checkFlexGap() {
   document.body.appendChild(flex);
   var isSupported = flex.scrollHeight === 1;
   flex.parentNode.removeChild(flex);
-  console.log(isSupported);
 
   if (!isSupported) document.body.classList.add("no-flexbox-gap");
 }
