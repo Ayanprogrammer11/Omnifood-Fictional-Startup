@@ -235,9 +235,7 @@ rem and em are same when specifying width for media queries
 /* ***************** */
 
 @media (max-width: 34em) {
-  html {
-    font-size: 43.75%;
-  }
+
   .grid {
     row-gap: 4.8rem;
   }
